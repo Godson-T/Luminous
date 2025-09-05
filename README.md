@@ -12,8 +12,6 @@ Shopping Cart: Add items to your cart and proceed to checkout with ease.
 
 Responsive Design: Optimized for both desktop and mobile devices.
 
-Secure Payment Integration: Safe and reliable payment gateway for transactions.
-
 # 🛠️ Technologies Used
 
 Frontend: HTML, CSS, JavaScript
