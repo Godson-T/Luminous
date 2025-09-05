@@ -18,14 +18,24 @@ Secure Payment Integration: Safe and reliable payment gateway for transactions.
 
 Frontend: HTML, CSS, JavaScript
 
-Backend: Python (Flask)
+Backend: Python (  Django)
+
+Version Control: Git & GitHub
 
 Database: SQLite
+
 🤝 Contributing
 
 
 Contributions are welcome! If you'd like to improve Luminous, please fork the repository and submit a pull request. Ensure your code adheres to the existing style and includes appropriate tests.
+
 📸 Screenshots
+
+Homepage:
+
 <img width="1578" height="760" alt="Screenshot 2025-09-06 000947" src="https://github.com/user-attachments/assets/aeff915f-6536-4f68-9fe4-04512b8d40f7" />
 
-Version Control: Git & GitHub
+Product Page:
+
+
+<img width="1563" height="750" alt="Screenshot 2025-09-06 030252" src="https://github.com/user-attachments/assets/187fb7a2-b3fb-4482-b88a-74318446c69b" />
