@@ -1,8 +1,8 @@
-#Luminous: Your Go-To Clothing E-Commerce Platform
+# Luminous: Your Go-To Clothing E-Commerce Platform
 
 Welcome to Luminous, a modern and minimalist clothing e-commerce platform designed to provide a seamless shopping experience. Whether you're a fashion enthusiast or a developer looking to explore e-commerce solutions, Luminous offers a clean and intuitive interface to browse and purchase stylish apparel.
 
-#✨ Features
+# ✨ Features
 
 User-Friendly Interface: Clean and intuitive design for effortless navigation.
 
@@ -14,7 +14,7 @@ Responsive Design: Optimized for both desktop and mobile devices.
 
 Secure Payment Integration: Safe and reliable payment gateway for transactions.
 
-$🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 Frontend: HTML, CSS, JavaScript
 
@@ -24,11 +24,11 @@ Version Control: Git & GitHub
 
 Database: SQLite
 
-#🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome! If you'd like to improve Luminous, please fork the repository and submit a pull request. Ensure your code adheres to the existing style and includes appropriate tests.
 
-#📸 Screenshots
+# 📸 Screenshots
 
 Homepage:
 
