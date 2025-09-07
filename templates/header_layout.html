@@ -1,0 +1,137 @@
+{% load static %}
+
+<div class="search-popup">
+    <div class="search-popup-container">
+
+      <form role="search" method="get" class="form-group" action="">
+        <input type="search" id="search-form" class="form-control border-0 border-bottom"
+          placeholder="Type and press enter" value="" name="s" />
+        <button type="submit" class="search-submit border-0 position-absolute bg-white"
+          style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">
+            <use xlink:href="#search"></use>
+          </svg></button>
+      </form>
+
+      
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
+    <div class="container-fluid">
+      <div class="row justify-content-between align-items-center w-100">
+
+        <div class="col-auto">
+          <a class="navbar-brand text-white" href="{% url "home" %}">
+            <svg width="250" height="75" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="70" font-family="Georgia, serif" font-size="50" fill="black">Luminous</text>
+             
+            </svg>
+          </a>
+        </div>
+
+        <div class="col-auto">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
+                <li class="nav-item dropdown">
+                  <a  href="{% url "home" %}"  class="nav-link">Home</a>
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Shop</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
+                    
+                    <li>
+                      <a href="{% url "list_product" %}" class="dropdown-item item-anchor">All products</a>
+                    </li>
+                    <li>
+                      <a href="{% url "mens_products" %}" class="dropdown-item item-anchor">Men's Collection</a>
+                    </li>
+                    <li>
+                      <a href="{% url "womens_products" %}" class="dropdown-item item-anchor">Women's Collection</a>
+                    </li>
+                    <li>
+                      <a href="{% url "accessories_products" %}" class="dropdown-item item-anchor">Acessories</a>
+                    </li>
+                
+                  </ul>
+                </li>
+                  
+                
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Pages</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
+                    <li>
+                      <a href="{% url "about" %}" class="dropdown-item item-anchor">About </a>
+                    </li>
+                    {% if  user.is_authenticated %}
+                    
+                    <li>
+                      <a href="{% url "orders:cart" %}" class="dropdown-item item-anchor">Cart</a>
+                    </li>
+                    <li>
+                      <a href="{% url "account" %}" class="dropdown-item item-anchor">My Account </a>
+                    </li>
+                    <li>
+                      <a href="{% url "orders:orders" %}" class="dropdown-item item-anchor">Orders </a>
+                    </li>
+                  </ul>
+                  {% endif%}
+                </li>
+                {% if not hide_blog_and_contact %} 
+                 {# Blog link is hidden when hide_blog is True #}
+                <li class="nav-item">
+                  <a class="nav-link" href="#blog-id">Blog</a>
+                </li>
+              
+                {% endif %}
+
+                 {# Blog link is hidden when hide_blog is True #}
+                 {% if not user.is_authenticated  %}
+                 <li class="nav-item">
+                  <a class="nav-link" href="{% url "account" %}">Register/Login</a>
+                </li>
+                {% endif %}
+                {% if   user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url "logout" %}">Logout</a>
+                </li>
+                {% endif%}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3 col-lg-auto">
+          <ul class="list-unstyled d-flex m-0">
+            <li class="d-none d-lg-block">
+              <a href="#" class="text-uppercase mx-3">Wishlist <span class="wishlist-count">(0)</span>
+              </a>
+            </li>
+            <li class="d-none d-lg-block">
+              <a href="{% url "orders:cart" %}" class="text-uppercase mx-3" >Cart
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </nav>

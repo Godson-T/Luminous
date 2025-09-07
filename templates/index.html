@@ -1,0 +1,50 @@
+{% extends "blank_layout.html" %}
+
+{% block content %}
+{% block billboard  %}
+{% include "billboard_layout.html" %}
+{% endblock billboard %}
+
+{% block categories %}
+  {% include "categories_layout.html" %}
+{% endblock categories %}
+
+{% block feature%}
+  {% include "features_layout.html" %}
+{% endblock feature %}
+
+{% block new_arrival %}
+  {% include "newarrival_layout.html" %}
+{% endblock new_arrival %}
+
+{% block colllection_billboard %}
+  {% include "colllection_billboard.html" %}
+{% endblock colllection_billboard %}
+
+
+
+
+{% block best_seller_layout %}
+  {% include "best_seller_layout.html" %}
+{% endblock best_seller_layout %}
+
+
+{% block testimonials_layout %}
+  {% include "testimonials_layout.html " %}
+{% endblock testimonials_layout %}
+
+
+{% block blog_layout %}
+  {% include "blog_layout.html" %}
+{% endblock blog_layout %}
+
+
+{% block newsletter_layout %}
+  {% include "newsletter_layout.html" %}
+{% endblock newsletter_layout %}
+{% block footer_layout %}
+{% include "footer_layout.html" %}
+{% endblock footer_layout %}
+
+
+{% endblock content %}

@@ -1,0 +1,165 @@
+{% load static %}
+
+<footer id="footer" class="bg-light pt-5">
+    <div class="container">
+        <div class="row g-4 py-4">
+            <!-- Brand Column -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-4">
+                    <a href="index.html" class="d-block mb-3">
+                        <svg width="180" height="50" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                            <text x="10" y="70" font-family="Georgia, serif" font-size="50" fill="#222">Luminous</text>
+                        </svg>
+                    </a>
+                    <p class="text-muted mb-4">Elevate your style with timeless elegance and modern craftsmanship. Designed for those who dare to shine.</p>
+                    <div class="social-links">
+                        <ul class="list-inline">
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-dark" aria-label="Facebook">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-dark" aria-label="Twitter">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item me-3">
+                                <a href="#" class="text-dark" aria-label="Instagram">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="text-dark" aria-label="Pinterest">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <use xlink:href="#pinterest"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="h6 mb-4 text-uppercase">Quick Links</h5>
+                <ul class="list-unstyled footer-menu">
+                    <li class="mb-2"><a href="{% url "home" %}" class="text-decoration-none text-muted hover-underline">Home</a></li>
+                    <li class="mb-2"><a href="{% url "about" %}" class="text-decoration-none text-muted hover-underline">About</a></li>
+                    <li class="mb-2"><a href="{% url "blog_page" %}" class="text-decoration-none text-muted hover-underline">Services</a></li>
+               </ul>
+            </div>
+
+            <!-- Help & Info Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="h6 mb-4 text-uppercase">Help & Info</h5>
+                <ul class="list-unstyled footer-menu">
+                    <li class="mb-2"><a href="{% url "orders:orders" %}" class="text-decoration-none text-muted hover-underline">Track Your Order</a></li>
+                    <li class="mb-2"><a href="" class="text-decoration-none text-muted hover-underline">Returns + Exchanges</a></li>
+                    <li class="mb-2"><a href="" class="text-decoration-none text-muted hover-underline">Shipping + Delivery</a></li>
+                    <li class="mb-2"><a href="" class="text-decoration-none text-muted hover-underline">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="h6 mb-4 text-uppercase">Contact Us</h5>
+                <address class="text-muted mb-4">
+                    <p class="mb-2">Do you have any questions or suggestions?</p>
+                    <a href="https://www.linkedin.com/in/godson-thomas-7ab524326/" target="_blank" class="d-block text-decoration-none hover-underline">
+                        LinkedIn Profile
+                    </a>
+                 </address>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-top py-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex flex-wrap align-items-center">
+                        <span class="me-3 text-muted small">We ship with:</span>
+                        <img src="{% static 'images/arct-icon.png' %}" alt="Shipping carrier" class="img-fluid me-3" style="height: 24px;">
+                        <img src="{% static 'images/dhl-logo.png' %}" alt="DHL" class="img-fluid" style="height: 24px;">
+                    </div>
+
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex flex-wrap align-items-center justify-content-md-end">
+                        <span class="me-3 text-muted small">Payment Options:</span>
+                        <img src="{% static 'images/visa-card.png' %}" alt="Visa" class="img-fluid me-2" style="height: 20px;">
+                        <img src="{% static 'images/paypal-card.png' %}" alt="PayPal" class="img-fluid me-2" style="height: 20px;">
+                        <img src="{% static 'images/master-card.png' %}" alt="Mastercard" class="img-fluid" style="height: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="py-3 text-center text-muted small">
+            <p class="mb-0">&copy; {% now "Y" %} Luminous. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    #footer {
+        font-size: 0.9rem;
+    }
+    
+    /* Underline Animation */
+    .hover-underline {
+        display: inline-block;
+        position: relative;
+        color: #6c757d;
+    }
+    
+    .hover-underline::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transition: width 0.3s ease;
+    }
+    
+    .hover-underline:hover {
+        color: #000 !important;
+        text-decoration: none;
+    }
+    
+    .hover-underline:hover::after {
+        width: 100%;
+    }
+    
+    /* Other Styles */
+    .social-links a {
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+    
+    .social-links a:hover {
+        opacity: 1;
+    }
+    
+    .footer-brand svg text {
+        fill: #222;
+    }
+    
+    .footer-menu li {
+        padding: 0.25rem 0;
+    }
+    
+    address a {
+        color: #6c757d !important;
+    }
+</style>
