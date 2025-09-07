@@ -1,6 +1,4 @@
 # Luminous
-
-## About
 Luminous is a sleek, modern clothing e-commerce platform designed for a seamless shopping experience. It features a responsive design, easy navigation, and smooth checkout, showcasing best practices in web development and UI/UX design.
 
 ## Features
