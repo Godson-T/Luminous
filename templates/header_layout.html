@@ -64,13 +64,9 @@
                       <a href="{% url "womens_products" %}" class="dropdown-item item-anchor">Women's Collection</a>
                     </li>
                     <li>
-                      <a href="{% url "accessories_products" %}" class="dropdown-item item-anchor">Acessories</a>
+                      <a href="{% url "accessories_products" %}" class="dropdown-item item-anchor">Accessories</a>
                     </li>
-                
                   </ul>
-                </li>
-                  
-                
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
@@ -80,12 +76,8 @@
                       <a href="{% url "about" %}" class="dropdown-item item-anchor">About </a>
                     </li>
                     {% if  user.is_authenticated %}
-                    
                     <li>
-                      <a href="{% url "orders:cart" %}" class="dropdown-item item-anchor">Cart</a>
-                    </li>
-                    <li>
-                      <a href="{% url "account" %}" class="dropdown-item item-anchor">My Account </a>
+                      <a href="{% url "orders:cart" %}" class="dropdown-                      <a href="{% url "account" %}" class="dropdown-item item-anchor">My Account </a>
                     </li>
                     <li>
                       <a href="{% url "orders:orders" %}" class="dropdown-item item-anchor">Orders </a>
