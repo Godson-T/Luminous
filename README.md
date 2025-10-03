@@ -16,8 +16,9 @@ Luminous is a sleek, modern clothing e-commerce platform designed for a seamless
 - Database: SQLite (can be switched to PostgreSQL)
 - Libraries: Django Messages, Pillow (for images)
 - Version Control: Git & GitHub
-##Usernam:USER
-##Password:user12345
+
+## Usernam:USER
+## Password:user12345
 ## Installation
 1. Clone the repository:
    
