@@ -9,12 +9,15 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-uz!3jdtktp7reeu5xo78*=-i1_mnz$l3nzt(2l8hv*hwtnj$4i"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-secret-key")
+
+DEBUG = os.getenv("DEBUG", "True") == "True"
+
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "luminous.pythonanywhere.com"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -81,6 +84,7 @@ LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
+
 
 # ✅ Fixed Static Files Settings
 STATIC_URL = "/static/"
